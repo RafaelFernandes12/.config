@@ -7,10 +7,16 @@ set -g prefix C-b
 unbind r
 bind r source-file ~/.tmux.conf
 
+unbind x
+bind x kill-pane
+
 unbind %
 bind / split-window -h
 unbind '"'
 bind - split-window -v
+
+set -g base-index 1
+setw -g pane-base-index 1
 
 unbind r
 bind r source-file ~/.tmux.conf
